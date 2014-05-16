@@ -63,7 +63,5 @@ template node[:opendkim][:service_config_file] do
   owner "root"
   group "root"
   mode "0644"
-  variables :socket_type => node[:opendkim][:socket_type], :socket_path => node[:opendkim][:socket_path],
-    :socket_port => node[:opendkim][:socket_port], :listen_host => node[:opendkim][:listen_host]
   notifies :restart, "service[opendkim]"
 end
