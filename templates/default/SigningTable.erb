@@ -1,0 +1,3 @@
+<% @node[:opendkim][:domains].keys.each do |domain| %>
+*<%= domain %> default._domainkey.<%= domain %>
+<% end %>
